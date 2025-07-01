@@ -1,0 +1,13 @@
+import pytest
+from common.all_api import AllApi
+from tools.get_log import get_log
+
+
+@pytest.mark.general
+class TestGeneral(object):
+
+    def test_general(self):
+        res = AllApi().send_request(file_path="general.yaml", api_name="提交工单")
+
+        get_log().info(res)
+        assert res['code'] == 0 and res['success'] == True
