@@ -1,13 +1,16 @@
+import allure
 import pytest
-import json
+
 from common.all_api import AllApi
 from tools.get_log import get_log
 from tools.read_yaml import ReadYaml
 
 
 @pytest.mark.login
+
 class TestLogin(object):
 
+    @allure.story("登录场景")
     def test_login(self):
         e_password = AllApi().get_rsa_public_key(password="Aa123456")
         data = ReadYaml().get_data(file_path="user_login.yaml", api_name="用户密码登录")
