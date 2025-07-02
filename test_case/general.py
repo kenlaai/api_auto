@@ -9,5 +9,5 @@ class TestGeneral(object):
     def test_general(self):
         res = AllApi().send_request(file_path="general.yaml", api_name="提交工单")
 
-        logs.info(res)
+        logs.logger.info(res)
         assert res['code'] == 0 and res['success'] == True
