@@ -7,7 +7,7 @@ from Crypto.PublicKey import RSA
 from common.login import Header
 from tools.read_yaml import ReadYaml
 from common.http_service import RunMethod
-from tools.get_log import get_log
+from tools.get_log import logs
 
 
 class AllApi(object):
@@ -15,7 +15,7 @@ class AllApi(object):
     def __init__(self):
         self.read = ReadYaml()
         self.run = RunMethod()
-        self.logger = get_log()
+        self.logger = logs
         self.header = Header()
 
     def send_request(self, file_path, api_name, data= None):

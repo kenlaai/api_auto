@@ -2,11 +2,11 @@ import allure
 import pytest
 
 from common.all_api import AllApi
-from tools.get_log import get_log
+from tools.get_log import logs
 from tools.read_yaml import ReadYaml
 
 
-@pytest.mark.login
+
 
 class TestLogin(object):
 
@@ -16,5 +16,5 @@ class TestLogin(object):
         data = ReadYaml().get_data(file_path="user_login.yaml", api_name="用户密码登录")
         data["password"] = e_password
         res1 = AllApi().send_request(file_path="user_login.yaml", api_name="用户密码登录", data=data)
-        get_log().info(res1)
+        logs.logger.info(res1)
         assert res1['code'] == 0 and res1['success'] == True
