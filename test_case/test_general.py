@@ -1,6 +1,6 @@
 import pytest
-from common.all_api import AllApi
-from tools.get_log import logs
+from api_auto.common.all_api import AllApi
+from api_auto.tools.get_log import logs
 
 
 @pytest.mark.general

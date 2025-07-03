@@ -1,6 +1,6 @@
 import os
 
-from common.public import Public
+from api_auto.common.public import Public
 
 # root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 root_dir = Public().get_object_path()

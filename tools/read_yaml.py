@@ -1,6 +1,6 @@
 
-from common.public import Public
-from common.config import config
+from api_auto.common.public import Public
+from api_auto.common.config import config
 import yaml
 
 class ReadYaml(object):

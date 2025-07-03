@@ -4,10 +4,10 @@ import json
 from Crypto.Cipher import PKCS1_v1_5
 from Crypto.PublicKey import RSA
 
-from common.login import Header
-from tools.read_yaml import ReadYaml
-from common.http_service import RunMethod
-from tools.get_log import logs
+from api_auto.common.login import Header
+from api_auto.tools.read_yaml import ReadYaml
+from api_auto.common.http_service import RunMethod
+from api_auto.tools.get_log import logs
 
 
 class AllApi(object):
