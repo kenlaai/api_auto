@@ -1,5 +1,4 @@
 import allure
-import pytest
 
 from common.all_api import AllApi
 from tools.get_log import logs
